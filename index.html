@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kharkiv Tennis Crew — Тренування, бронювання, ціни, контакти</title>
+  <meta name="description" content="Kharkiv Tennis Crew — Тренування, бронювання, ціни, контакти" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .container{max-width:1150px}
+    .tennis-fade{background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 40%,rgba(0,0,0,.65))}
+    .ball-shadow{box-shadow:0 10px 30px rgba(244,226,27,.35)}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <!-- Navbar -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="container mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 font-extrabold">
+        <img class="inline-block w-6 h-6 rounded-full"  src="tennis_crew_logo.jpg" alt=""/>
+        <span class="tracking-tight">Kharkiv Tennis Crew</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#book" class="hover:text-emerald-700">Забронювати</a>
+        <a href="#pricing" class="hover:text-emerald-700">Ціни</a>
+        <a href="#gallery" class="hover:text-emerald-700">Галерея</a>
+        <a href="#contact" class="hover:text-emerald-700">Контакти</a>
+      </nav>
+      <a href="#book" class="px-4 py-2 rounded-xl text-white" style="background:#1e7f3f">Записатись</a>
+    </div>
+  </header>
+
+  <!-- Hero with background video -->
+  <section id="home" class="relative min-h-[90vh] flex items-center">
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+      <source src="https://www.pexels.com/download/video/5740608/" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 tennis-fade"></div>
+
+    <div class="relative container mx-auto px-4 pt-24 pb-16 grid md:grid-cols-2 gap-10 items-center text-white">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Гра починається тут.
+          <span class="block mt-2 text-emerald-300">Тестове тренування - безкоштовно.</span>
+        </h1>
+        <p class="mt-4 text-lg opacity-90">Перші кроки у тенісі чи прокачування техніки з тренером. Запишіться за 30 секунд.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#book" class="px-5 py-3 rounded-xl font-semibold text-slate-900" style="background:#f4e21b">Забронювати пробне</a>
+          <a href="#pricing" class="px-5 py-3 rounded-xl border border-white/50 hover:bg-white/10">Подивитися ціни</a>
+        </div>
+        <div class="mt-6 flex items-center gap-3 text-sm opacity-90">
+          <img src="tennis_crew_logo.jpg" class="w-10 h-10 rounded-full object-cover" alt=""/>
+          <span>500+ задоволених гравців • 4 корти • Інвентар на місці</span>
+        </div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <h3 class="text-xl font-semibold">Чому з нами?</h3>
+        <ul class="mt-3 space-y-2 text-sm opacity-90 list-disc list-inside">
+          <li>Індивідуальні та групові тренування</li>
+          <li>Сучасні корти та освітлення</li>
+          <li>Підготовка до турнірів та матч-практика</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="book" class="py-20 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-3">
+          <h2 class="text-3xl font-bold text-slate-900">Забронювати пробне тренування</h2>
+          <p class="mt-2 text-slate-600">Виберіть зручний час, вкажіть контакт та рівень підготовки. Ми підтвердимо SMS/Email.</p>
+          <form id="book-form" class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-slate-600 mb-1">Ім'я</label>
+              <input required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Іван Іванов" />
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600 mb-1">Телефон</label>
+              <input required type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="+38 050 123 45 67" />
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600 mb-1">Email</label>
+              <input required type="email" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="you@mail.com" />
+            </div>
+            <div>
+              <label class="block text-sm text-slate-600 mb-1">Дата</label>
+              <input required type="date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm text-slate-600 mb-1">Рівень</label>
+              <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500">
+                <option>Новачок</option>
+                <option>Любитель</option>
+                <option>Просунутий</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm text-slate-600 mb-1">Коментар (опціонально)</label>
+              <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Бажаний час, тренер і т.д."></textarea>
+            </div>
+            <div class="sm:col-span-2 flex items-center justify-between">
+              <div class="flex items-center gap-2 text-sm text-slate-600">
+                <span class="inline-block w-3 h-3 rounded-full" style="background:#f4e21b"></span>
+                <span>Інвентар надамо безкоштовно</span>
+              </div>
+              <button class="px-6 py-3 rounded-xl font-semibold text-white ball-shadow" style="background:#1e7f3f">Забронювати</button>
+            </div>
+          </form>
+        </div>
+        <aside class="md:col-span-2 bg-white rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-semibold text-slate-900">Як це працює</h3>
+          <ol class="mt-3 space-y-2 text-sm text-slate-600 list-decimal list-inside">
+            <li>Залишаєте заявку</li>
+            <li>Ми підтверджуємо слот</li>
+            <li>Приходьте за 10 хвилин, отримуєте ракетку та м'яч</li>
+          </ol>
+          <img class="mt-6 rounded-xl object-cover" src="kharkiv-tennis.png" alt=""/>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-slate-900 text-center">Ціни</h2>
+      <p class="mt-2 text-center text-slate-600">Прозоро та просто. Абонементи - вигідніше.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold">Пробне тренування</h3>
+          <p class="text-4xl font-extrabold mt-2">0 грн</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>✔ 45 хвилин з тренером</li>
+            <li>✔ Інвентар увімкнений</li>
+          </ul>
+          <a href="#book" class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl text-slate-900" style="background:#f4e21b">Записатись</a>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 ring-2" style="--tw-ring-color:#1e7f3f">
+          <h3 class="font-semibold">Індивідуальна</h3>
+          <p class="text-4xl font-extrabold mt-2">350 грн</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>✔ 60 хвилин з тренером</li>
+            <li>✔ Персональний план</li>
+            <li>✔ Відео-розбір техніки</li>
+          </ul>
+          <a href="#book" class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl text-white" style="background:#1e7f3f">Вибрати</a>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold">Абонемент 8 занять</h3>
+          <p class="text-4xl font-extrabold mt-2">2 000 грн</p>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            <li>✔ Економія 500 грн</li>
+            <li>✔ Гнучкий графік</li>
+            <li>✔ Пріоритетні слоти</li>
+          </ul>
+          <a href="#book" class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50">Записатись</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-20 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-slate-900 text-center">Галерея</h2>
+      <p class="mt-2 text-center text-slate-600">Корти, тренування та турніри</p>
+      <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img class="rounded-xl object-cover h-56 w-full" src="tennis_crew_logo.jpg" alt="Tennis"/>
+        <img class="rounded-xl object-cover h-56 w-full" src="gallery_1.jpg" alt="Tennis"/>
+        <img class="rounded-xl object-cover h-56 w-full" src="kharkiv-tennis.png" alt="Tennis"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl font-bold text-slate-900 text-center">Контакти</h2>
+      <p class="mt-2 text-center text-slate-600">Адреса: якась адреса • Щодня 8:00–22:00</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <form id="contact-form" class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+          <label class="block text-sm text-slate-600 mb-1">Ваше ім'я</label>
+          <input class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Іван" />
+          <label class="block text-sm text-slate-600 mb-1 mt-4">Email</label>
+          <input type="email" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="you@mail.com" />
+          <label class="block text-sm text-slate-600 mb-1 mt-4">Повідомлення</label>
+          <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Питання з тренувань"></textarea>
+          <button class="mt-4 px-5 py-3 rounded-xl text-white w-full" style="background:#1e7f3f">Надіслати</button>
+        </form>
+        <div class="rounded-2xl p-6 border border-slate-200">
+          <div class="flex items-center gap-3">
+            <span class="inline-block w-10 h-10 rounded-full" style="background:#f4e21b"></span>
+            <div>
+              <div class="font-semibold">+38 050 123 45 67</div>
+              <div class="text-sm text-slate-600">Телефонуйте або пишіть у Telegram</div>
+            </div>
+          </div>
+          <div class="mt-4 flex items-center gap-3">
+            <span class="inline-block w-10 h-10 rounded-full bg-emerald-600"></span>
+            <div>
+              <div class="font-semibold">info@kharkivtenniscrew.example</div>
+              <div class="text-sm text-slate-600">Відповідь протягом дня</div>
+            </div>
+          </div>
+          <div class="embed-map-fixed"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=kharkiv&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://kling-o1.pro" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Kling O1</a></div><style>.embed-map-fixed{position:relative;text-align:right;width:600px;height:400px;}.embed-map-container{overflow:hidden;background:none!important;width:600px;height:400px;}.embed-map-frame{width:600px!important;height:400px!important;}</style></div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-slate-500 border-t border-slate-200">
+    <div class="container mx-auto px-4">© <span id="year"></span> Kharkiv Tennis Crew — Усі права захищені</div>
+  </footer>
+
+  <script>
+    // Demo handlers only
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const bookForm = document.getElementById('book-form');
+    bookForm?.addEventListener('submit', (e)=>{e.preventDefault(); alert('Дякую! Ми зв\'яжемося для підтвердження часу.');});
+    const contactForm = document.getElementById('contact-form');
+    contactForm?.addEventListener('submit', (e)=>{e.preventDefault(); alert('Дякую! Ми відповімо на ваш запит.');});
+  </script>
+</body>
+</html>
