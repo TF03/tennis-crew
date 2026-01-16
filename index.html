@@ -14,6 +14,7 @@
   <!-- End Google Tag Manager -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/imask"></script>
   <style>
     .container{max-width:1150px}
     .tennis-fade{background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 40%,rgba(0,0,0,.65))}
@@ -42,6 +43,23 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4S2H8Q6"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<div id="success-modal" class="fixed inset-0 z-[60] flex items-center justify-center px-4 opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+
+  <div class="bg-white rounded-2xl p-8 shadow-2xl relative z-10 max-w-sm w-full text-center transform scale-95 transition-all duration-300" id="modal-content">
+    <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+    </div>
+
+    <h3 class="text-2xl font-bold text-slate-900 mb-2">Заявку прийнято!</h3>
+    <p class="text-slate-600 mb-6">Дякуємо. Ми зв'яжемося з вами найближчим часом для підтвердження.</p>
+
+    <button onclick="closeModal()" class="w-full py-3 rounded-xl font-semibold text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition shadow-lg shadow-emerald-200">
+      Чудово
+    </button>
+  </div>
+</div>
 
 <!-- Navbar -->
 <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
@@ -112,14 +130,6 @@
           <div>
             <label class="block text-sm text-slate-600 mb-1">Телефон</label>
             <input required type="tel" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="+38 050 123 45 67" />
-          </div>
-          <div>
-            <label class="block text-sm text-slate-600 mb-1">Email</label>
-            <input required type="email" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="you@mail.com" />
-          </div>
-          <div>
-            <label class="block text-sm text-slate-600 mb-1">Дата</label>
-            <input required type="date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" />
           </div>
           <div class="sm:col-span-2">
             <label class="block text-sm text-slate-600 mb-1">Рівень</label>
@@ -245,8 +255,9 @@
         <div class="text-slate-500 font-medium text-sm mb-3 uppercase tracking-wide">
           Питання щодо тренувань та деталі
         </div>
+
         <div class="flex items-center gap-3">
-          <img class="inline-block w-10 h-10 rounded-full"  src="images/tennis_crew_logo.jpg" alt=""/>
+          <img class="inline-block w-10 h-10 rounded-full" src="images/tennis_crew_logo.jpg" alt=""/>
           <div>
             <a href="tel:+380630463419" class="font-semibold hover:opacity-75 transition">
               +380 (63) 046 34 19
@@ -254,13 +265,32 @@
             <div class="text-sm text-slate-600">телефонуйте або пишіть у telegram/viber</div>
           </div>
         </div>
+
         <div class="mt-4 rounded-xl overflow-hidden border border-slate-200 h-[224px] w-full bg-slate-100 relative">
           <iframe
                   class="absolute inset-0 w-full h-full"
                   frameborder="0"
                   scrolling="no"
-                  src="https://maps.google.com/maps?q=Харків,+Ювілейний+проспект+54г&hl=uk&z=15&output=embed">
+                  src="https://maps.google.com/maps?q=KHARKIV+TENNIS+CREW,Харків,+Ювілейний+проспект+54г&hl=uk&z=17&output=embed">
           </iframe>
+        </div>
+
+        <div class="mt-5 flex items-center justify-center gap-6 pt-2">
+          <a href="https://www.instagram.com/khtenniscrew?igsh=MWVqYnA0aXd6ZWZxdg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
+             class="text-slate-400 hover:text-[#E1306C] transition-colors duration-300 hover:scale-110 transform">
+            <span class="sr-only">Instagram</span>
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+
+          <a href="https://t.me/+vruVQQCTCms1YTQ6" target="_blank" rel="noopener noreferrer"
+             class="text-slate-400 hover:text-[#229ED9] transition-colors duration-300 hover:scale-110 transform">
+            <span class="sr-only">Telegram</span>
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -272,30 +302,106 @@
 </footer>
 
 <script>
-  // Demo handlers only
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const bookForm = document.getElementById('book-form');
-  bookForm?.addEventListener('submit', (e)=>{e.preventDefault(); alert('Дякую! Ми зв\'яжемося для підтвердження часу.');});
-  const contactForm = document.getElementById('contact-form');
-  contactForm?.addEventListener('submit', (e)=>{e.preventDefault(); alert('Дякую! Ми відповімо на ваш запит.');});
+  const phoneInput = document.querySelector('input[type="tel"]');
+  const maskOptions = {
+    mask: '+{38} (000) 000-00-00',
+    lazy: false
+  };
+  const mask = IMask(phoneInput, maskOptions);
 
-  // Gallery
+  const TOKEN = "7998577503:AAHK6dcWzWjfkBAp-9CSbgDp3MY47IZlS5I";
+  const CHAT_ID = "-5110962385";
+  const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+  document.getElementById('book-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (!mask.masked.isComplete) {
+      alert('Будь ласка, введіть номер телефону повністю.');
+      phoneInput.focus();
+      return;
+    }
+
+    const nameVal = this.querySelector('[placeholder="Іван Іванов"]').value;
+    const commentVal = this.querySelector('textarea').value;
+
+    const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)|(\.com|\.net|\.org|\.ru)/i;
+    if (urlPattern.test(nameVal) || urlPattern.test(commentVal)) {
+      alert('Будь ласка, не додавайте посилання у форму.');
+      return;
+    }
+
+    let message = `<b>🚀 Заявка з сайту!</b>\n\n`;
+    message += `👤 <b>Ім'я:</b> ${nameVal}\n`;
+    message += `📞 <b>Телефон:</b> ${mask.value}\n`; // Берем значение из маски
+    message += `📊 <b>Рівень:</b> ${this.querySelector('select').value}\n`;
+    if(commentVal) {
+      message += `💬 <b>Коментар:</b> ${commentVal}`;
+    }
+
+    fetch(URI_API, {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: 'html'
+      })
+    })
+    .then(res => {
+      if(res.ok) {
+        this.reset();
+        mask.value = "";
+        mask.updateValue();
+        showModal();
+      } else {
+        alert('Сталася помилка. Зателефонуйте нам, будь ласка.');
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Помилка мережі.');
+    });
+  });
+
+  function handleSuccess(form) {
+    form.reset();
+    mask.value = "";
+    mask.updateValue();
+    showModal();
+  }
+
+  const modal = document.getElementById('success-modal');
+  const modalContent = document.getElementById('modal-content');
+  let modalTimeout;
+
+  function showModal() {
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modalContent.classList.remove('scale-95');
+    modalContent.classList.add('scale-100');
+
+    modalTimeout = setTimeout(closeModal, 4000);
+  }
+
+  function closeModal() {
+    clearTimeout(modalTimeout);
+
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-95');
+  }
+
   const gallery = document.getElementById('scrolling-gallery');
-
   function autoScroll() {
     if (gallery.matches(':hover')) return;
-
     const cardWidth = gallery.firstElementChild.getBoundingClientRect().width;
     const gap = 16;
-    const scrollAmount = cardWidth + gap;
-
     if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
       gallery.scrollTo({ left: 0, behavior: 'smooth' });
     } else {
-      gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      gallery.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
     }
   }
-
   setInterval(autoScroll, 2000);
 </script>
 </body>
