@@ -1,445 +1,379 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Kharkiv Tennis Crew — Тренування, бронювання, ціни, контакти</title>
-  <meta name="description" content="Індивідуальні та групові тренування з тенісу в Харкові. Корти на Ювілейному. Запишись на пробне заняття!" />
-  <meta name="keywords" content="теніс харків, тренування з тенісу, тенісний корт ювілейний, навчання тенісу, kharkiv tennis crew" />
-  <meta name="theme-color" content="#3c8756" />
+    <title>Kharkiv Tennis Crew — Тренування, бронювання, ціни, контакти</title>
+    <meta name="description"
+          content="Індивідуальні та групові тренування з тенісу в Харкові. Корти на Ювілейному. Запишись на пробне заняття!"/>
+    <meta name="keywords"
+          content="теніс харків, тренування з тенісу, тенісний корт ювілейний, навчання тенісу, kharkiv tennis crew"/>
+    <meta name="theme-color" content="#3c8756"/>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Kharkiv Tennis Crew — Твій теніс починається тут" />
-  <meta property="og:description" content="Тренування для дітей та дорослих. Інвентар безкоштовно. Знижка 20% на перше заняття." />
-  <meta property="og:image" content="images/tennis_crew_logo.jpg" />
-  <meta property="og:url" content="https://khtenniscrew.com" /> <link rel="icon" type="image/png" href="images/tennis_crew_logo.jpg" />
+    <link rel="canonical" href="https://khtenniscrew.com/">
 
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KMK89Q29');</script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/imask"></script>
-  <style>
-    .container{max-width:1150px}
-    .tennis-fade{background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 40%,rgba(0,0,0,.65))}
-    .ball-shadow{box-shadow:0 10px 30px rgba(244,226,27,.35)}
-    html{scroll-behavior:smooth}
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Kharkiv Tennis Crew — Твій теніс починається тут"/>
+    <meta property="og:description"
+          content="Тренування для дітей та дорослих. Інвентар безкоштовно. Знижка 20% на перше заняття."/>
+    <meta property="og:image" content="images/tennis_crew_logo.jpg"/>
+    <meta property="og:url" content="https://khtenniscrew.com"/>
+    <meta property="og:locale" content="uk_UA"/>
 
-    .custom-scrollbar::-webkit-scrollbar {
-      height: 8px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #cbd5e1;
-      border-radius: 20px;
-      border: 2px solid transparent;
-      background-clip: content-box;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background-color: #94a3b8;
-    }
-  </style>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Kharkiv Tennis Crew — Твій теніс починається тут"/>
+    <meta name="twitter:description" content="Тренування для дітей та дорослих. Запис — до 30 секунд."/>
+    <meta name="twitter:image" content="https://khtenniscrew.com/images/tennis_crew_logo.jpg"/>
+
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KMK89Q29');</script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <link rel="stylesheet" href="assets/app.css">
 </head>
 <body class="bg-white text-slate-800">
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMK89Q29"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div id="success-modal" class="fixed inset-0 z-[60] flex items-center justify-center px-4 opacity-0 pointer-events-none transition-opacity duration-300">
-  <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
-  <div class="bg-white rounded-2xl p-8 shadow-2xl relative z-10 max-w-sm w-full text-center transform scale-95 transition-all duration-300" id="modal-content">
-    <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMK89Q29"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="success-modal"
+     class="fixed inset-0 z-[60] flex items-center justify-center px-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+    <div class="bg-white rounded-2xl p-8 shadow-2xl relative z-10 max-w-sm w-full text-center transform scale-95 transition-all duration-300"
+         id="modal-content">
+        <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-2">Заявку прийнято!</h3>
+        <p class="text-slate-600 mb-6">Дякуємо. Ми зв'яжемося з вами найближчим часом для підтвердження.</p>
+        <button onclick="closeModal()"
+                class="w-full py-3 rounded-xl font-semibold text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition shadow-lg shadow-emerald-200">
+            Чудово
+        </button>
     </div>
-    <h3 class="text-2xl font-bold text-slate-900 mb-2">Заявку прийнято!</h3>
-    <p class="text-slate-600 mb-6">Дякуємо. Ми зв'яжемося з вами найближчим часом для підтвердження.</p>
-    <button onclick="closeModal()" class="w-full py-3 rounded-xl font-semibold text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition shadow-lg shadow-emerald-200">
-      Чудово
-    </button>
-  </div>
 </div>
 
 <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-  <div class="container mx-auto px-4 h-14 flex items-center justify-between">
-    <a href="#home" class="flex items-center gap-2 font-extrabold">
-      <img class="inline-block w-8 h-8 rounded-full"  src="images/tennis_crew_logo.jpg" alt="Logo"/>
-      <span class="tracking-tight">KHARKIV TENNIS CREW</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#book" class="hover:text-emerald-700">Забронювати</a>
-      <a href="#pricing" class="hover:text-emerald-700">Ціни</a>
-      <a href="#gallery" class="hover:text-emerald-700">Галерея</a>
-      <a href="#contact" class="hover:text-emerald-700">Контакти</a>
-    </nav>
-    <a href="#book" class="px-4 py-2 rounded-xl text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition">Записатись</a>
-  </div>
+    <div class="container mx-auto px-4 h-14 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-2 font-extrabold">
+            <img class="inline-block w-8 h-8 rounded-full" src="images/tennis_crew_logo.jpg" alt="Logo"/>
+            <span class="tracking-tight">KHARKIV TENNIS CREW</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#book" class="hover:text-emerald-700">Забронювати</a>
+            <a href="#pricing" class="hover:text-emerald-700">Ціни</a>
+            <a href="#gallery" class="hover:text-emerald-700">Галерея</a>
+            <a href="#contact" class="hover:text-emerald-700">Контакти</a>
+        </nav>
+        <a href="#book"
+           class="px-4 py-2 rounded-xl text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition">Записатись</a>
+    </div>
 </header>
 
 <section id="home" class="relative min-h-[90vh] flex items-center">
-  <video
-          class="absolute inset-0 w-full h-full object-cover"
-          autoplay
-          muted
-          loop
-          playsinline
-          webkit-playsinline
-          poster="images/video_poster.jpg"
-  >
-    <source src="video/main_video_2.MOV" type="video/mp4">
-  </video>
-  <div class="absolute inset-0 tennis-fade"></div>
+    <video
+            class="absolute inset-0 w-full h-full object-cover"
+            id="heroVideo"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            poster="images/video_poster.jpg"
+    >
+        <source src="video/main_video_2.MOV" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 tennis-fade"></div>
 
-  <div class="relative container mx-auto px-4 pt-24 pb-16 grid md:grid-cols-2 gap-10 items-center text-white">
-    <div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-        Tеніс починається тут
-        <span class="block mt-3 text-xl sm:text-2xl md:text-3xl text-emerald-300 font-bold">
+    <div class="relative container mx-auto px-4 pt-24 pb-16 grid md:grid-cols-2 gap-10 items-center text-white">
+        <div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+                Tеніс починається тут
+                <span class="block mt-3 text-xl sm:text-2xl md:text-3xl text-emerald-300 font-bold">
         Перше індивідуальне або парне тренування зі знижкою 20%
       </span>
-      </h1>
-      <p class="mt-4 text-base sm:text-lg opacity-90 max-w-lg">
-        Для дітей, новачків і тих, хто хоче вийти на новий рівень.
-        Тренування з тренером, жива атмосфера, сильне комʼюніті.
-        Запис — до 30 секунд.
-      </p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-3">
-        <a href="#book" class="px-5 py-3 rounded-xl font-semibold text-slate-900 bg-[#f4e21b] hover:bg-[#fbec42] transition text-center">
-          Забронювати зі знижкою
-        </a>
-        <a href="#pricing" class="px-5 py-3 rounded-xl border border-white/50 hover:bg-white/10 text-center">
-          Подивитися формати
-        </a>
-      </div>
-      <div class="mt-8 flex items-center gap-3 text-sm opacity-90">
-        <img src="images/tennis_crew_logo.jpg" class="w-10 h-10 rounded-full object-cover" alt=""/>
-        <span>500+ гравців • Безкоштовний інвентар</span>
-      </div>
+            </h1>
+            <p class="mt-4 text-base sm:text-lg opacity-90 max-w-lg">
+                Для дітей, новачків і тих, хто хоче вийти на новий рівень.
+                Тренування з тренером, жива атмосфера, сильне комʼюніті.
+                Запис — до 30 секунд.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="#book"
+                   class="px-5 py-3 rounded-xl font-semibold text-slate-900 bg-[#f4e21b] hover:bg-[#fbec42] transition text-center">
+                    Забронювати зі знижкою
+                </a>
+                <a href="#pricing" class="px-5 py-3 rounded-xl border border-white/50 hover:bg-white/10 text-center">
+                    Подивитися формати
+                </a>
+            </div>
+            <div class="mt-8 flex items-center gap-3 text-sm opacity-90">
+                <img src="images/tennis_crew_logo.jpg" class="w-10 h-10 rounded-full object-cover" alt=""/>
+                <span>500+ гравців • Безкоштовний інвентар</span>
+            </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm hidden md:block">
+            <h3 class="text-xl font-semibold">Чому з нами?</h3>
+            <ul class="mt-3 space-y-2 text-sm opacity-90 list-disc list-inside">
+                <li>Різноманітність форматів тренувань</li>
+                <li>Комʼюніті однодумців</li>
+                <li>Турніри</li>
+                <li>Івенти</li>
+            </ul>
+        </div>
     </div>
-    <div class="bg-white/10 rounded-2xl p-6 border border-white/20 backdrop-blur-sm hidden md:block">
-      <h3 class="text-xl font-semibold">Чому з нами?</h3>
-      <ul class="mt-3 space-y-2 text-sm opacity-90 list-disc list-inside">
-        <li>Різноманітність форматів тренувань</li>
-        <li>Комʼюніті однодумців</li>
-        <li>Турніри</li>
-        <li>Івенти</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <section id="book" class="py-20 bg-slate-50">
-  <div class="container mx-auto px-4">
-    <div class="grid md:grid-cols-5 gap-10 items-start">
-      <div class="md:col-span-3">
-        <h2 class="text-3xl font-bold text-slate-900">Забронювати пробне тренування</h2>
-        <p class="mt-2 text-slate-600">Виберіть зручний час, вкажіть контакт та рівень підготовки. Ми підтвердимо telegram/viber.</p>
-        <form id="book-form" class="mt-6 grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm text-slate-600 mb-1">Ім'я</label>
-            <input required name="name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Іван Іванов" />
-          </div>
-          <div>
-            <label class="block text-sm text-slate-600 mb-1">Телефон</label>
-            <input required type="tel" name="phone" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="+38 050 123 45 67" />
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block text-sm text-slate-600 mb-1">Рівень</label>
-            <select name="level" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500">
-              <option>Вперше на корті</option>
-              <option>Новачок</option>
-              <option>Середній рівень</option>
-              <option>Просунутий рівень</option>
-              <option>Дитячі тренування</option>
-            </select>
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block text-sm text-slate-600 mb-1">Коментар (опціонально)</label>
-            <textarea name="comment" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Бажаний час, тренер і т.д."></textarea>
-          </div>
-          <div class="sm:col-span-2 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
-            <div class="flex items-center gap-2 text-sm text-slate-600 order-2 sm:order-1">
-              <span class="inline-block w-3 h-3 rounded-full bg-[#f4e21b]"></span>
-              <span>Інвентар надамо безкоштовно</span>
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-5 gap-10 items-start">
+            <div class="md:col-span-3">
+                <h2 class="text-3xl font-bold text-slate-900">Забронювати пробне тренування</h2>
+                <p class="mt-2 text-slate-600">Виберіть зручний час, вкажіть контакт та рівень підготовки. Ми
+                    підтвердимо telegram/viber.</p>
+                <form id="book-form" class="mt-6 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm text-slate-600 mb-1">Ім'я</label>
+                        <input required name="name"
+                               class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                               placeholder="Іван Іванов"/>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-slate-600 mb-1">Телефон</label>
+                        <input required type="tel" name="phone"
+                               class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                               placeholder="+38 050 123 45 67"/>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm text-slate-600 mb-1">Рівень</label>
+                        <select name="level"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500">
+                            <option>Вперше на корті</option>
+                            <option>Новачок</option>
+                            <option>Середній рівень</option>
+                            <option>Просунутий рівень</option>
+                            <option>Дитячі тренування</option>
+                        </select>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-sm text-slate-600 mb-1">Коментар (опціонально)</label>
+                        <textarea name="comment" rows="4"
+                                  class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                                  placeholder="Бажаний час, тренер і т.д."></textarea>
+                    </div>
+                    <div class="sm:col-span-2 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
+                        <div class="flex items-center gap-2 text-sm text-slate-600 order-2 sm:order-1">
+                            <span class="inline-block w-3 h-3 rounded-full bg-[#f4e21b]"></span>
+                            <span>Інвентар надамо безкоштовно</span>
+                        </div>
+                        <div class="w-full sm:w-auto flex flex-col items-center sm:items-end order-1 sm:order-2">
+                            <button type="submit"
+                                    class="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-white ball-shadow bg-[#3c8756] hover:bg-[#1e7f3f] transition shadow-lg shadow-emerald-200/50">
+                                Забронювати
+                            </button>
+                            <div class="mt-2 text-[10px] text-slate-400 text-center sm:text-right w-full whitespace-nowrap">
+                                Натискаючи кнопку, ви погоджуєтеся з
+                                <a href="privacy.html" target="_blank"
+                                   class="underline hover:text-slate-600 transition">Політикою конфіденційності</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="w-full sm:w-auto flex flex-col items-center sm:items-end order-1 sm:order-2">
-              <button type="submit" class="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-white ball-shadow bg-[#3c8756] hover:bg-[#1e7f3f] transition shadow-lg shadow-emerald-200/50">
-                Забронювати
-              </button>
-              <div class="mt-2 text-[10px] text-slate-400 text-center sm:text-right w-full whitespace-nowrap">
-                Натискаючи кнопку, ви погоджуєтеся з
-                <a href="privacy.html" target="_blank" class="underline hover:text-slate-600 transition">Політикою конфіденційності</a>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <aside class="md:col-span-2 sticky top-24 self-start bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-        <h3 class="font-bold text-xl text-slate-900 mb-4">Як це працює?</h3>
-        <ol class="space-y-4 text-slate-600 list-none mb-6">
-          <li class="flex gap-3">
-            <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">1</span>
-            <span>Залишаєте заявку</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">2</span>
-            <span>Ми підтверджуємо слот та звʼязуємося з вами</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">3</span>
-            <span>Чекаємо на корті!</span>
-          </li>
-        </ol>
-        <div class="rounded-xl overflow-hidden border border-slate-100">
-          <img class="w-full h-auto block" src="images/how-is-it-works-section.jpg" alt="Процес бронювання" />
+            <aside class="md:col-span-2 sticky top-24 self-start bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                <h3 class="font-bold text-xl text-slate-900 mb-4">Як це працює?</h3>
+                <ol class="space-y-4 text-slate-600 list-none mb-6">
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">1</span>
+                        <span>Залишаєте заявку</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">2</span>
+                        <span>Ми підтверджуємо слот та звʼязуємося з вами</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">3</span>
+                        <span>Чекаємо на корті!</span>
+                    </li>
+                </ol>
+                <div class="rounded-xl overflow-hidden border border-slate-100">
+                    <img class="w-full h-auto block" src="images/how-is-it-works-section.jpg" alt="Процес бронювання"/>
+                </div>
+            </aside>
         </div>
-      </aside>
     </div>
-  </div>
 </section>
 
 <section id="pricing" class="py-20">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-slate-900 text-center">Формати тренувань</h2>
-    <p class="mt-2 text-center text-slate-600">Обирай та дій!</p>
-    <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <div class="p-6 rounded-2xl border border-slate-200">
-        <h3 class="font-semibold">Індивідуальне тренування</h3>
-        <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li>✔ 60 хвилин з тренером</li>
-          <li>✔ Інвентар та корт входить в вартість</li>
-        </ul>
-        <a href="#book" class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl text-slate-900 bg-[#f4e21b] hover:brightness-90 transition duration-300">Записатись</a>
-      </div>
-      <div class="p-6 rounded-2xl border border-slate-200 ring-2" style="--tw-ring-color:#1e7f3f">
-        <h3 class="font-semibold">Парне тренування</h3>
-        <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li>✔ Тренер, ти і партнер</li>
-          <li>✔ Приймаємо заявки парами або знайдемо напарника тобі за рівнем</li>
-          <li>✔ Інвентар та корт входить в вартість</li>
-        </ul>
-        <a href="#book" class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl text-white bg-green-700 hover:bg-green-800 transition duration-300">Вибрати</a>
-      </div>
-      <div class="p-6 rounded-2xl border border-slate-200">
-        <h3 class="font-semibold">Групове тренування </h3>
-        <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li>✔ До 4 гравців та тренер</li>
-          <li>✔ Увага кожному учню</li>
-          <li>✔ Запальні ігрові вправи</li>
-          <li>✔ Інвентар та корт входить в вартість</li>
-        </ul>
-        <a href="#book" class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition duration-300">Записатись</a>
-      </div>
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-slate-900 text-center">Формати тренувань</h2>
+        <p class="mt-2 text-center text-slate-600">Обирай та дій!</p>
+        <p class="mt-1 text-center text-xs text-slate-500">
+            Вартість у зимовий період. Оренда корту входить у вартість тренування.
+        </p>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl border border-slate-200">
+                <h3 class="font-semibold">Індивідуальне тренування</h3>
+                <p class="mt-1 text-sm font-semibold text-slate-900">від 1400 грн</p>
+                <ul class="mt-3 space-y-2 text-sm text-slate-600">
+                    <li>✔ 60 хвилин з тренером</li>
+                    <li>✔ Інвентар та корт входить в вартість</li>
+                </ul>
+                <a href="#book"
+                   class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl text-slate-900 bg-[#f4e21b] hover:brightness-90 transition duration-300">Записатись</a>
+            </div>
+            <div class="p-6 rounded-2xl border border-slate-200 ring-2" style="--tw-ring-color:#1e7f3f">
+                <h3 class="font-semibold">Парне тренування</h3>
+                <p class="mt-1 text-sm font-semibold text-slate-900">від 800 грн</p>
+                <ul class="mt-3 space-y-2 text-sm text-slate-600">
+                    <li>✔ Тренер, ти і партнер</li>
+                    <li>✔ Приймаємо заявки парами або знайдемо напарника тобі за рівнем</li>
+                    <li>✔ Інвентар та корт входить в вартість</li>
+                </ul>
+                <a href="#book"
+                   class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl text-white bg-green-700 hover:bg-green-800 transition duration-300">Вибрати</a>
+            </div>
+            <div class="p-6 rounded-2xl border border-slate-200">
+                <h3 class="font-semibold">Групове тренування </h3>
+                <p class="mt-1 text-sm font-semibold text-slate-900">від 450 грн</p>
+                <ul class="mt-3 space-y-2 text-sm text-slate-600">
+                    <li>✔ До 4 гравців та тренер</li>
+                    <li>✔ Увага кожному учню</li>
+                    <li>✔ Запальні ігрові вправи</li>
+                    <li>✔ Інвентар та корт входить в вартість</li>
+                </ul>
+                <a href="#book"
+                   class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition duration-300">Записатись</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <section id="gallery" class="py-20 bg-slate-50">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-slate-900 text-center">Галерея</h2>
-    <p class="mt-2 text-center text-slate-600 mb-8">Корти, тренування та турніри</p>
-    <div id="scrolling-gallery" class="flex flex-nowrap overflow-x-auto gap-4 pb-4 snap-x snap-mandatory custom-scrollbar">
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_1.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_2.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_3.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_4.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_5.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_6.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_7.jpg" alt="Tennis"/>
-      <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200" src="images/gallery_8.jpg" alt="Tennis"/>
-      <div class="shrink-0 w-4"></div>
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-slate-900 text-center">Галерея</h2>
+        <p class="mt-2 text-center text-slate-600 mb-8">Корти, тренування та турніри</p>
+        <div id="scrolling-gallery"
+             class="flex flex-nowrap overflow-x-auto gap-4 pb-4 snap-x snap-mandatory custom-scrollbar">
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_1.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_2.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_3.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_4.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_5.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_6.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_7.jpg" alt="Tennis"/>
+            <img class="shrink-0 w-72 md:w-96 h-64 rounded-xl object-cover snap-center border border-slate-200"
+                 src="images/gallery_8.jpg" alt="Tennis"/>
+            <div class="shrink-0 w-4"></div>
+        </div>
     </div>
-  </div>
 </section>
 
 <section id="contact" class="py-20">
-  <div class="container mx-auto px-4 max-w-3xl">
-    <h2 class="text-3xl font-bold text-slate-900 text-center">Контакти</h2>
-    <p class="mt-2 text-center text-slate-600">Адреса: Ювілейний проспект 54г • Щодня 8:00–22:00</p>
-    <div class="mt-8 grid md:grid-cols-2 gap-6">
+    <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold text-slate-900 text-center">Контакти</h2>
+        <p class="mt-2 text-center text-slate-600">Адреса: Ювілейний проспект 54г • Щодня 8:00–22:00</p>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
 
-      <form id="contact-form" class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-        <label class="block text-sm text-slate-600 mb-1">Ваше ім'я</label>
-        <input required name="name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Іван" />
-        <label class="block text-sm text-slate-600 mb-1 mt-4">Телефон</label>
-        <input required type="tel" name="phone" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="+38 050 123 45 67" />
-        <label class="block text-sm text-slate-600 mb-1 mt-4">Повідомлення</label>
-        <textarea name="comment" rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500" placeholder="Питання з тренувань"></textarea>
-        <button type="submit" class="mt-4 px-5 py-3 rounded-xl text-white w-full bg-[#3c8756] hover:bg-[#1e7f3f] transition">Надіслати</button>
-      </form>
+            <form id="contact-form" class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                <label class="block text-sm text-slate-600 mb-1">Ваше ім'я</label>
+                <input required name="name"
+                       class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Іван"/>
+                <label class="block text-sm text-slate-600 mb-1 mt-4">Телефон</label>
+                <input required type="tel" name="phone"
+                       class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                       placeholder="+38 050 123 45 67"/>
+                <label class="block text-sm text-slate-600 mb-1 mt-4">Повідомлення</label>
+                <textarea name="comment" rows="4"
+                          class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
+                          placeholder="Питання з тренувань"></textarea>
+                <button type="submit"
+                        class="mt-4 px-5 py-3 rounded-xl text-white w-full bg-[#3c8756] hover:bg-[#1e7f3f] transition">
+                    Надіслати
+                </button>
+            </form>
 
-      <div class="rounded-2xl p-6 border border-slate-200">
-        <div class="text-slate-500 font-medium text-sm mb-3 uppercase tracking-wide">
-          Питання щодо тренувань та деталі
+            <div class="rounded-2xl p-6 border border-slate-200">
+                <div class="text-slate-500 font-medium text-sm mb-3 uppercase tracking-wide">
+                    Питання щодо тренувань та деталі
+                </div>
+                <div class="flex items-center gap-3">
+                    <img class="inline-block w-10 h-10 rounded-full" src="images/tennis_crew_logo.jpg" alt=""/>
+                    <div>
+                        <a href="tel:+380630463419" class="font-semibold hover:opacity-75 transition">
+                            +380 (63) 046 34 19
+                        </a>
+                        <div class="text-sm text-slate-600">телефонуйте або пишіть у telegram/viber</div>
+                    </div>
+                </div>
+                <div class="mt-4 rounded-xl overflow-hidden border border-slate-200 h-[224px] w-full bg-slate-100 relative">
+                    <iframe
+                            class="absolute inset-0 w-full h-full"
+                            frameborder="0"
+                            scrolling="no"
+                            src="https://maps.google.com/maps?q=KHARKIV+TENNIS+CREW,Харків,+Ювілейний+проспект+54г&hl=uk&z=17&output=embed">
+                    </iframe>
+                </div>
+                <div class="mt-5 flex items-center justify-center gap-6 pt-2">
+                    <a href="https://www.instagram.com/khtenniscrew?igsh=MWVqYnA0aXd6ZWZxdg%3D%3D&utm_source=qr"
+                       target="_blank" rel="noopener noreferrer"
+                       class="text-slate-400 hover:text-[#E1306C] transition-colors duration-300 hover:scale-110 transform">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/+vruVQQCTCms1YTQ6" target="_blank" rel="noopener noreferrer"
+                       class="text-slate-400 hover:text-[#229ED9] transition-colors duration-300 hover:scale-110 transform">
+                        <span class="sr-only">Telegram</span>
+                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="flex items-center gap-3">
-          <img class="inline-block w-10 h-10 rounded-full" src="images/tennis_crew_logo.jpg" alt=""/>
-          <div>
-            <a href="tel:+380630463419" class="font-semibold hover:opacity-75 transition">
-              +380 (63) 046 34 19
-            </a>
-            <div class="text-sm text-slate-600">телефонуйте або пишіть у telegram/viber</div>
-          </div>
-        </div>
-        <div class="mt-4 rounded-xl overflow-hidden border border-slate-200 h-[224px] w-full bg-slate-100 relative">
-          <iframe
-                  class="absolute inset-0 w-full h-full"
-                  frameborder="0"
-                  scrolling="no"
-                  src="https://maps.google.com/maps?q=KHARKIV+TENNIS+CREW,Харків,+Ювілейний+проспект+54г&hl=uk&z=17&output=embed">
-          </iframe>
-        </div>
-        <div class="mt-5 flex items-center justify-center gap-6 pt-2">
-          <a href="https://www.instagram.com/khtenniscrew?igsh=MWVqYnA0aXd6ZWZxdg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"
-             class="text-slate-400 hover:text-[#E1306C] transition-colors duration-300 hover:scale-110 transform">
-            <span class="sr-only">Instagram</span>
-            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="https://t.me/+vruVQQCTCms1YTQ6" target="_blank" rel="noopener noreferrer"
-             class="text-slate-400 hover:text-[#229ED9] transition-colors duration-300 hover:scale-110 transform">
-            <span class="sr-only">Telegram</span>
-            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <footer class="py-10 text-center text-sm text-slate-500 border-t border-slate-200">
-  <div class="container mx-auto px-4 flex flex-col items-center gap-2">
-    <span>© <span id="year"></span> KHARKIV TENNIS CREW — Усі права захищені</span>
-    <a href="privacy.html" class="underline hover:text-slate-800 transition">
-      Політика конфіденційності
-    </a>
-  </div>
+    <div class="container mx-auto px-4 flex flex-col items-center gap-2">
+        <span>© <span id="year"></span> KHARKIV TENNIS CREW — Усі права захищені</span>
+        <a href="privacy.html" class="underline hover:text-slate-800 transition">
+            Політика конфіденційності
+        </a>
+    </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const phoneInputs = document.querySelectorAll('input[type="tel"]');
-  const masks = [];
-
-  phoneInputs.forEach(input => {
-    const mask = IMask(input, {
-      mask: '+{38} (000) 000-00-00',
-      lazy: false
-    });
-    masks.push(mask);
-    input.dataset.maskIndex = masks.length - 1;
-  });
-
-  const TOKEN = "7998577503:AAHK6dcWzWjfkBAp-9CSbgDp3MY47IZlS5I";
-  const CHAT_ID = "-1003600227487";
-  const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
-  function handleFormSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-
-    const phoneInput = form.querySelector('input[type="tel"]');
-    const maskIndex = phoneInput.dataset.maskIndex;
-    const currentMask = masks[maskIndex];
-
-    if (currentMask && !currentMask.masked.isComplete) {
-      alert('Будь ласка, введіть номер телефону повністю.');
-      phoneInput.focus();
-      return;
-    }
-
-    const nameVal = form.querySelector('[name="name"]').value;
-    const commentVal = form.querySelector('textarea').value;
-
-    const levelSelect = form.querySelector('select[name="level"]');
-    const levelVal = levelSelect ? levelSelect.value : null;
-
-    const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)|(\.com|\.net|\.org|\.ru)/i;
-    if (urlPattern.test(nameVal) || urlPattern.test(commentVal)) {
-      alert('Будь ласка, не додавайте посилання у форму.');
-      return;
-    }
-
-    let message = `<b>🚀 Нова заявка!</b>\n\n`;
-    message += `👤 <b>Ім'я:</b> ${nameVal}\n`;
-    message += `📞 <b>Телефон:</b> ${phoneInput.value}\n`; // Берем значение прямо из инпута (оно уже с маской)
-
-    if (levelVal) {
-      message += `📊 <b>Рівень:</b> ${levelVal}\n`;
-    }
-
-    if(commentVal) {
-      message += `💬 <b>Коментар:</b> ${commentVal}`;
-    }
-
-    fetch(URI_API, {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: message,
-        parse_mode: 'html'
-      })
-    })
-    .then(res => {
-      if(res.ok) {
-        form.reset();
-        currentMask.value = "";
-        currentMask.updateValue();
-        showModal();
-      } else {
-        alert('Сталася помилка. Зателефонуйте нам, будь ласка.');
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      alert('Помилка мережі.');
-    });
-  }
-
-  const bookForm = document.getElementById('book-form');
-  const contactForm = document.getElementById('contact-form');
-
-  if(bookForm) bookForm.addEventListener('submit', handleFormSubmit);
-  if(contactForm) contactForm.addEventListener('submit', handleFormSubmit);
-
-  const modal = document.getElementById('success-modal');
-  const modalContent = document.getElementById('modal-content');
-  let modalTimeout;
-
-  function showModal() {
-    modal.classList.remove('opacity-0', 'pointer-events-none');
-    modalContent.classList.remove('scale-95');
-    modalContent.classList.add('scale-100');
-    modalTimeout = setTimeout(closeModal, 4000);
-  }
-
-  function closeModal() {
-    clearTimeout(modalTimeout);
-    modal.classList.add('opacity-0', 'pointer-events-none');
-    modalContent.classList.remove('scale-100');
-    modalContent.classList.add('scale-95');
-  }
-
-  const gallery = document.getElementById('scrolling-gallery');
-  function autoScroll() {
-    if (gallery.matches(':hover')) return;
-    const cardWidth = gallery.firstElementChild.getBoundingClientRect().width;
-    const gap = 16;
-    if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
-      gallery.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      gallery.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
-    }
-  }
-  setInterval(autoScroll, 2000);
-</script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
