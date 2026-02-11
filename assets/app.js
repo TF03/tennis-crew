@@ -16,6 +16,48 @@ const TOKEN = "7998577503:AAHK6dcWzWjfkBAp-9CSbgDp3MY47IZlS5I";
 const CHAT_ID = "-1003600227487";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
+function switchFormType(type) {
+    const btnTraining = document.getElementById('btn-training');
+    const btnCertificate = document.getElementById('btn-certificate');
+    const orderInput = document.getElementById('order_type');
+    const levelBlock = document.getElementById('level-block');
+    const submitBtn = document.getElementById('submit-btn');
+    const commentLabel = document.getElementById('comment-label');
+
+    orderInput.value = type;
+
+    const activeClass = "flex-1 py-3 text-sm font-bold rounded-lg bg-white text-emerald-700 shadow-sm text-center transition-all duration-300 cursor-default";
+    const inactiveClass = "flex-1 py-3 text-sm font-medium rounded-lg text-slate-500 hover:text-slate-700 text-center transition-all duration-300 cursor-pointer";
+
+    if (type === 'training') {
+        btnTraining.className = activeClass;
+        btnCertificate.className = inactiveClass;
+
+        levelBlock.style.maxHeight = "100px";
+        levelBlock.style.opacity = "1";
+        levelBlock.style.marginBottom = "0px";
+
+        submitBtn.textContent = "Забронювати";
+        commentLabel.textContent = "Коментар (опціонально)";
+    } else {
+        btnCertificate.className = activeClass;
+        btnTraining.className = inactiveClass;
+
+        levelBlock.style.maxHeight = "0px";
+        levelBlock.style.opacity = "0";
+        levelBlock.style.marginBottom = "-16px";
+
+        submitBtn.textContent = "Замовити сертифікат";
+        commentLabel.textContent = "На яку суму або послугу?";
+    }
+}
+
+function activateCertificateMode() {
+    const bookSection = document.getElementById('book');
+    bookSection.scrollIntoView({behavior: 'smooth'});
+    switchFormType('certificate');
+}
+
 function handleFormSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -33,8 +75,8 @@ function handleFormSubmit(e) {
     const nameVal = form.querySelector('[name="name"]').value;
     const commentVal = form.querySelector('textarea').value;
 
-    const levelSelect = form.querySelector('select[name="level"]');
-    const levelVal = levelSelect ? levelSelect.value : null;
+    const orderTypeInput = form.querySelector('[name="order_type"]');
+    const isCertificate = orderTypeInput && orderTypeInput.value === 'certificate';
 
     const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)|(\.com|\.net|\.org|\.ru)/i;
     if (urlPattern.test(nameVal) || urlPattern.test(commentVal)) {
@@ -42,12 +84,22 @@ function handleFormSubmit(e) {
         return;
     }
 
-    let message = `<b>🚀 Нова заявка!</b>\n\n`;
-    message += `👤 <b>Ім'я:</b> ${nameVal}\n`;
-    message += `📞 <b>Телефон:</b> ${phoneInput.value}\n`; // Берем значение прямо из инпута (оно уже с маской)
+    let message = "";
 
-    if (levelVal) {
-        message += `📊 <b>Рівень:</b> ${levelVal}\n`;
+    if (isCertificate) {
+        message += `<b>🎁 ЗАМОВЛЕННЯ СЕРТИФІКАТУ!</b>\n\n`;
+    } else {
+        message += `<b>🚀 Нова заявка на тренування!</b>\n\n`;
+    }
+
+    message += `👤 <b>Ім'я:</b> ${nameVal}\n`;
+    message += `📞 <b>Телефон:</b> ${phoneInput.value}\n`;
+
+    if (!isCertificate) {
+        const levelSelect = form.querySelector('select[name="level"]');
+        if (levelSelect) {
+            message += `📊 <b>Рівень:</b> ${levelSelect.value}\n`;
+        }
     }
 
     if (commentVal) {
@@ -68,6 +120,11 @@ function handleFormSubmit(e) {
                 form.reset();
                 currentMask.value = "";
                 currentMask.updateValue();
+
+                if (isCertificate) {
+                    switchFormType('training');
+                }
+
                 showModal();
             } else {
                 alert('Сталася помилка. Зателефонуйте нам, будь ласка.');

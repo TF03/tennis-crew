@@ -80,14 +80,24 @@
             <img class="inline-block w-8 h-8 rounded-full" src="images/tennis_crew_logo.jpg" alt="Logo"/>
             <span class="tracking-tight">KHARKIV TENNIS CREW</span>
         </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-            <a href="#book" class="hover:text-emerald-700">Забронювати</a>
-            <a href="#pricing" class="hover:text-emerald-700">Ціни</a>
-            <a href="#gallery" class="hover:text-emerald-700">Галерея</a>
-            <a href="#contact" class="hover:text-emerald-700">Контакти</a>
+        <nav class="hidden md:flex items-center gap-5 text-sm font-medium">
+            <a href="#book" class="hover:text-emerald-700 transition">Забронювати</a>
+            <a href="#pricing" class="hover:text-emerald-700 transition">Ціни</a>
+            <a href="#certificate"
+               class="flex items-center gap-1 text-amber-600 hover:text-amber-700 transition font-semibold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                </svg>
+                Сертифікат
+            </a>
+            <a href="#gallery" class="hover:text-emerald-700 transition">Галерея</a>
+            <a href="#contact" class="hover:text-emerald-700 transition">Контакти</a>
         </nav>
         <a href="#book"
-           class="px-4 py-2 rounded-xl text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition">Записатись</a>
+           class="px-4 py-2 rounded-xl text-white bg-[#3c8756] hover:bg-[#1e7f3f] transition text-sm font-semibold shadow-md shadow-emerald-200/50">
+            Записатись
+        </a>
     </div>
 </header>
 
@@ -152,50 +162,72 @@
                 <h2 class="text-3xl font-bold text-slate-900">Забронювати пробне тренування</h2>
                 <p class="mt-2 text-slate-600">Виберіть зручний час, вкажіть контакт та рівень підготовки. Ми
                     підтвердимо telegram/viber.</p>
-                <form id="book-form" class="mt-6 grid sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm text-slate-600 mb-1">Ім'я</label>
-                        <input required name="name"
-                               class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
-                               placeholder="Іван Іванов"/>
-                    </div>
-                    <div>
-                        <label class="block text-sm text-slate-600 mb-1">Телефон</label>
-                        <input required type="tel" name="phone"
-                               class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
-                               placeholder="+38 050 123 45 67"/>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label class="block text-sm text-slate-600 mb-1">Рівень</label>
-                        <select name="level"
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500">
-                            <option>Вперше на корті</option>
-                            <option>Новачок</option>
-                            <option>Середній рівень</option>
-                            <option>Просунутий рівень</option>
-                            <option>Дитячі тренування</option>
-                        </select>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label class="block text-sm text-slate-600 mb-1">Коментар (опціонально)</label>
-                        <textarea name="comment" rows="4"
-                                  class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500"
-                                  placeholder="Бажаний час, тренер і т.д."></textarea>
-                    </div>
-                    <div class="sm:col-span-2 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
-                        <div class="flex items-center gap-2 text-sm text-slate-600 order-2 sm:order-1">
-                            <span class="inline-block w-3 h-3 rounded-full bg-[#f4e21b]"></span>
-                            <span>Інвентар надамо безкоштовно</span>
+                <form id="book-form" class="mt-6">
+                    <div class="flex p-1 bg-slate-200 rounded-xl mb-6 select-none cursor-pointer">
+                        <div id="btn-training"
+                             class="flex-1 py-3 text-sm font-bold rounded-lg bg-white text-emerald-700 shadow-sm text-center transition-all duration-300"
+                             onclick="switchFormType('training')">
+                            🎾 Тренування
                         </div>
-                        <div class="w-full sm:w-auto flex flex-col items-center sm:items-end order-1 sm:order-2">
-                            <button type="submit"
-                                    class="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-white ball-shadow bg-[#3c8756] hover:bg-[#1e7f3f] transition shadow-lg shadow-emerald-200/50">
-                                Забронювати
-                            </button>
-                            <div class="mt-2 text-[10px] text-slate-400 text-center sm:text-right w-full whitespace-nowrap">
-                                Натискаючи кнопку, ви погоджуєтеся з
-                                <a href="privacy.html" target="_blank"
-                                   class="underline hover:text-slate-600 transition">Політикою конфіденційності</a>
+                        <div id="btn-certificate"
+                             class="flex-1 py-3 text-sm font-medium rounded-lg text-slate-500 hover:text-slate-700 text-center transition-all duration-300"
+                             onclick="switchFormType('certificate')">
+                            🎁 Сертифікат
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="order_type" id="order_type" value="training">
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm text-slate-600 mb-1">Ім'я</label>
+                            <input required name="name"
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-300 text-base focus:ring-2 focus:ring-emerald-500 outline-none transition-shadow"
+                                   placeholder="Іван"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-slate-600 mb-1">Телефон</label>
+                            <input required type="tel" name="phone"
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-300 text-base focus:ring-2 focus:ring-emerald-500 outline-none transition-shadow"
+                                   placeholder="+38 050 123 45 67"/>
+                        </div>
+
+                        <div class="sm:col-span-2 transition-[max-height,opacity] duration-500 ease-in-out overflow-hidden max-h-[100px] opacity-100"
+                             id="level-block">
+                            <label class="block text-sm text-slate-600 mb-1">Рівень</label>
+                            <select name="level"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300 text-base focus:ring-2 focus:ring-emerald-500 outline-none bg-white">
+                                <option>Вперше на корті</option>
+                                <option>Новачок</option>
+                                <option>Середній рівень</option>
+                                <option>Просунутий рівень</option>
+                                <option>Дитячі тренування</option>
+                            </select>
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <label class="block text-sm text-slate-600 mb-1" id="comment-label">Коментар
+                                (опціонально)</label>
+                            <textarea name="comment" rows="3"
+                                      class="w-full px-4 py-3 rounded-xl border border-slate-300 text-base focus:ring-2 focus:ring-emerald-500 outline-none transition-shadow"
+                                      placeholder="Бажаний час, тренер і т.д."></textarea>
+                        </div>
+
+                        <div class="sm:col-span-2 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
+                            <div class="flex items-center gap-2 text-sm text-slate-600 order-2 sm:order-1">
+                                <span class="inline-block w-3 h-3 rounded-full bg-[#f4e21b]"></span>
+                                <span>Інвентар надамо безкоштовно</span>
+                            </div>
+                            <div class="w-full sm:w-auto flex flex-col items-center sm:items-end order-1 sm:order-2">
+                                <button type="submit" id="submit-btn"
+                                        class="w-full sm:w-auto px-8 py-3 rounded-xl font-semibold text-white ball-shadow bg-[#3c8756] hover:bg-[#1e7f3f] transition-all active:scale-95 duration-200">
+                                    Забронювати
+                                </button>
+                                <div class="mt-2 text-[10px] text-slate-400 text-center sm:text-right w-full whitespace-nowrap">
+                                    Натискаючи кнопку, ви погоджуєтеся з
+                                    <a href="privacy.html" target="_blank"
+                                       class="underline hover:text-slate-600 transition">Політикою конфіденційності</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -265,6 +297,53 @@
                 </ul>
                 <a href="#book"
                    class="mt-5 inline-block w-full text-center px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition duration-300">Записатись</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="certificate" class="py-20 bg-slate-900 text-white overflow-hidden relative">
+    <div class="absolute -right-20 -top-20 w-96 h-96 bg-[#f4e21b] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+
+            <div class="order-1 md:order-1">
+                <span class="text-[#f4e21b] font-bold tracking-wider uppercase text-sm">Найкращий подарунок</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mt-2 leading-tight">Подарунковий сертифікат на теніс</h2>
+                <p class="mt-4 text-slate-300 text-lg">
+                    Подаруй емоції! Сертифікат діє на будь-які тренування клубу.
+                </p>
+
+                <ul class="mt-6 space-y-3 text-slate-300">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-[#f4e21b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Паперовий або електронний</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-[#f4e21b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Термін дії — 3 місяці</span>
+                    </li>
+                </ul>
+
+                <button onclick="activateCertificateMode()"
+                        class="mt-8 w-full md:w-auto px-8 py-4 rounded-xl font-bold text-slate-900 bg-[#f4e21b] hover:bg-[#fbec42] transition shadow-lg shadow-yellow-500/20 active:scale-95 duration-200">
+                    Замовити сертифікат
+                </button>
+            </div>
+
+            <div class="order-2 md:order-2 flex justify-center">
+                <div class="relative transform rotate-2 hover:rotate-0 transition duration-500 w-full max-w-sm md:max-w-md">
+                    <div class="absolute inset-0 bg-white/10 rounded-xl transform translate-x-3 translate-y-3"></div>
+                    <img src="images/certificate.jpg" alt="Сертифікат"
+                         class="relative rounded-xl shadow-2xl border border-white/10 w-full object-cover aspect-[4/3]">
+                </div>
             </div>
         </div>
     </div>
